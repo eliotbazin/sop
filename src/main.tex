@@ -1,0 +1,38 @@
+\documentclass[a4paper,twoside,12pt,hidelinks]{report}
+\input{core/static}
+\input{core/preamble}
+\input{core/settings}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{gobble}
+\input{frontmatter/frontpage}
+\input{frontmatter/title}
+\newpage
+\newgeometry{top=2.1cm, bottom=2cm, outer=2cm, inner=3cm}
+\pagenumbering{roman}
+\pagestyle{main}
+\input{frontmatter/abstract}
+\newpage
+\tableofcontents
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{arabic}
+\input{mainmatter/indledning}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\printbibliography[heading=bibintoc]
+% \cleardoublepage
+% \appendix
+% Appendices
+
+\input{backmatter/backpage} % Auto clears to left
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+

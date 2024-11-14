@@ -1,0 +1,63 @@
+% This file contains information about the report.
+
+% Skolens navn, rapportens titel, forfatter(e), klassebetegnelse, vejlederens navn(e), dato, fag. Desuden skal resumeet stå på titelbladet
+
+\newgeometry{top=20mm,bottom=16mm,outer=10mm,inner=15mm}
+
+\pagecolor{white}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture,overlay]
+	\node[xshift=0.075\textwidth] (top) at (current page text area.north) {};
+	\node[xshift=0.075\textwidth] (bot) at (current page text area.south) {};
+	\draw[line width=1pt] (top) -- (bot);
+
+	\node[anchor=north west,
+		align=left,
+		text width=0.575\textwidth-0.8cm
+	] at (current page text area.north west) {
+		\begin{minipage}[][\textheight][t]{\linewidth}
+			\textbf{Titel:} \\
+			\doctitle
+			\vspace{16mm}\\
+			\textbf{Forfatter:}\\
+			\docauthor
+			\vspace{8mm}\\
+			\textbf{Hold:}\\
+			\docauthorclass
+			\vspace*{\fill}\\
+			Dato og underskrift:\vspace{12mm}\\
+			\rule{\textwidth}{0.6pt}
+			\vspace{16mm}\\
+			Jeg bekræfter herved med min underskrift, at opgavebesvarelsen er udarbejdet af mig.
+			Jeg har ikke anvendt tidligere bedømt arbejde uden henvisning hertil, og opgavebesvarelsen er udfærdiget uden anvendelse
+			af uretmæssig hjælp og uden brug af hjælpemidler, der ikke har været tilladt under prøven.
+		\end{minipage}
+	};
+
+	\node[anchor=north east,
+		align=left,
+		text width=0.425\textwidth-0.8cm
+	] at (current page text area.north east) {
+		\begin{minipage}[][\textheight][t]{\linewidth}
+			\docproject\\
+			\docdate
+			\vspace{24mm}\\
+			Uddannelse: Teknisk studentereksamen (htx)
+			\vspace{30mm}\\
+			\textbf{Vejledere:}\\
+			\docsupervisor\\
+			\vspace{46mm}\\
+			\textbf{Bemærkning:}\\
+			Denne rapport er udarbejdet på baggrund	af forløbet \docproject\ som et led i \docsubject\ undervisningen på \docauthorgym\
+			for at kunne opfylde kravende til overstående uddannelse.
+			\vspace*{\fill}\\
+			\textbf{H. C. Ørsted Gymnasiet\\
+				Lyngby}\\
+			Paul Fennebergs Allé 20\\
+			2800 Kongens Lyngby\\
+			Danmark\\
+			\href{www.tec.dk/hc-oersted-gymnasiet/hc-oersted-gymnasiet-i-lyngby}{www.tec.dk/hc-oersted-gymnasiet/}
+		\end{minipage}
+	};
+\end{tikzpicture}
