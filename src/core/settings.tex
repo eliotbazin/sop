@@ -58,27 +58,15 @@
 
 % FONT %
 \setmainfont{Arial}
-% \setmathrm{Arial}
-% \setmathfont(Digits,Latin){Arial}
-\IfFontExistsTF{NeoSansPro-Medium.otf}
-{ % If True set headings to NeoSans Pro
-	\newfontface\NeoSansProReg{NeoSansPro-Regular.otf}
-	\newfontface\NeoSansProMed{NeoSansPro-Medium.otf}
-	\titleformat{\chapter}{\NeoSansProMed\huge}{\thechapter}{1em}{\raggedright}
-	\titleformat{\section}{\NeoSansProMed\Large}{\thesection}{1em}{\raggedright}
-	\titleformat{\subsection}{\NeoSansProMed\large}{\thesubsection}{1em}{\raggedright}
-	\titleformat{\subsubsection}{\NeoSansProMed\normalsize}{\thesubsubsection}{1em}{\raggedright}
-	\newcommand\TitleFont[1]{{\NeoSansProMed #1}}
-	\newcommand\titlefont[1]{{\NeoSansProReg #1}}
-}
-{ % If false
-	\titleformat{\chapter}{\bfseries\huge}{\thechapter}{1em}{\raggedright}
-	\titleformat{\section}{\bfseries\Large}{\thesection}{1em}{\raggedright}
-	\titleformat{\subsection}{\bfseries\large}{\thesubsection}{1em}{\raggedright}
-	\titleformat{\subsubsection}{\bfseries\normalsize}{\thesubsubsection}{1em}{\raggedright}
-	\newcommand\TitleFont[1]{{\bfseries #1}}
-	\newcommand\titlefont[1]{{#1}}
-}
+
+% Ensure the Neo Sans Pro fontfamily is installed on the system. Else an error will occur
+\newfontface\NeoSansProReg{Neo Sans Pro Regular}
+\newfontface\NeoSansProMed{Neo Sans Pro Medium}
+\newfontface\NeoSansProBold{Neo Sans Pro Bold}
+\titleformat{\chapter}{\NeoSansProMed\huge}{\thechapter}{1em}{\raggedright}
+\titleformat{\section}{\NeoSansProMed\Large}{\thesection}{1em}{\raggedright}
+\titleformat{\subsection}{\NeoSansProMed\large}{\thesubsection}{1em}{\raggedright}
+\titleformat{\subsubsection}{\NeoSansProMed\normalsize}{\thesubsubsection}{1em}{\raggedright}
 \urlstyle{sf}
 
 \onehalfspacing
