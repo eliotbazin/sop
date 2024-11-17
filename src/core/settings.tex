@@ -57,7 +57,21 @@
 \definecolor{TECwhite}   {HTML}     {ffffff / 0,0,0,0}
 
 % FONT %
-\setmainfont{Arial}
+\setmainfont{STIXTwoText}[
+	Extension = .otf,
+	UprightFont = *-Regular,
+	ItalicFont = *-Italic,
+	BoldFont = *-Bold,
+	BoldItalicFont = *-BoldItalic
+]
+\setmonofont{CourierPrime}[
+	Extension = .ttf,
+	UprightFont = *-Regular,
+	ItalicFont = *-Italic,
+	BoldFont = *-Bold,
+	BoldItalicFont = *-BoldItalic
+]
+\setmathfont{STIXTwoMath-Regular.otf}
 
 % Ensure the Neo Sans Pro fontfamily is installed on the system. Else an error will occur
 \newfontface\NeoSansProReg{NeoSansPro-Regular.otf}
@@ -68,7 +82,7 @@
 \titleformat{\section}{\NeoSansProMed\Large}{\thesection}{1em}{\raggedright}
 \titleformat{\subsection}{\NeoSansProMed\large}{\thesubsection}{1em}{\raggedright}
 \titleformat{\subsubsection}{\NeoSansProMed\normalsize}{\thesubsubsection}{1em}{\raggedright}
-\urlstyle{sf}
+\urlstyle{tt}
 
 \onehalfspacing
 \setlength{\parindent}{0pt}
