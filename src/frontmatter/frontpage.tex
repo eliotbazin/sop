@@ -27,8 +27,8 @@
 		at (current page text area.north east)
 		{
 			\begin{tabular}{r}
-				\textbf{\docauthorgym} \\
-				\docsubject
+				{\NeoSansProMed \docauthorgym} \\
+				{\NeoSansProReg \docsubject}
 			\end{tabular}
 		};
 
@@ -42,8 +42,8 @@
 		{
 			\Huge
 			\begin{tabular}{p{\linewidth}}
-				\TitleFont{\doctitle} \smallskip \\
-				\titlefont{\docproject}
+				{\NeoSansProMed \doctitle} \smallskip \\
+				{\NeoSansProReg \docproject}
 			\end{tabular}
 		};
 
@@ -57,24 +57,24 @@
 		% Author 
 		\node[anchor=south west,
 			xshift=10mm,
-			yshift=0mm,
+			yshift=3mm,
 			color=white]
 		at (bg.north west)
 		{
 			\begin{tabular}{l}
-				\textbf{\docauthor}, \docauthorclass
+				{\NeoSansProMed \docauthor}{\NeoSansProReg , \docauthorclass}
 			\end{tabular}
 		};
 
 		% Year
 		\node[anchor=south east,
 			xshift=-10mm,
-			yshift=0mm,
+			yshift=3mm,
 			color=white]
 		at (bg.north east)
 		{
 			\begin{tabular}{r}
-				\docdate
+				{\NeoSansProReg \docdate}
 			\end{tabular}
 		};
 

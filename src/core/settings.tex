@@ -57,29 +57,32 @@
 \definecolor{TECwhite}   {HTML}     {ffffff / 0,0,0,0}
 
 % FONT %
-\setmainfont{Arial}
-% \setmathrm{Arial}
-% \setmathfont(Digits,Latin){Arial}
-\IfFontExistsTF{NeoSansPro-Medium.otf}
-{ % If True set headings to NeoSans Pro
-	\newfontface\NeoSansProReg{NeoSansPro-Regular.otf}
-	\newfontface\NeoSansProMed{NeoSansPro-Medium.otf}
-	\titleformat{\chapter}{\NeoSansProMed\huge}{\thechapter}{1em}{\raggedright}
-	\titleformat{\section}{\NeoSansProMed\Large}{\thesection}{1em}{\raggedright}
-	\titleformat{\subsection}{\NeoSansProMed\large}{\thesubsection}{1em}{\raggedright}
-	\titleformat{\subsubsection}{\NeoSansProMed\normalsize}{\thesubsubsection}{1em}{\raggedright}
-	\newcommand\TitleFont[1]{{\NeoSansProMed #1}}
-	\newcommand\titlefont[1]{{\NeoSansProReg #1}}
-}
-{ % If false
-	\titleformat{\chapter}{\bfseries\huge}{\thechapter}{1em}{\raggedright}
-	\titleformat{\section}{\bfseries\Large}{\thesection}{1em}{\raggedright}
-	\titleformat{\subsection}{\bfseries\large}{\thesubsection}{1em}{\raggedright}
-	\titleformat{\subsubsection}{\bfseries\normalsize}{\thesubsubsection}{1em}{\raggedright}
-	\newcommand\TitleFont[1]{{\bfseries #1}}
-	\newcommand\titlefont[1]{{#1}}
-}
-\urlstyle{sf}
+\setmainfont{STIXTwoText}[
+	Extension = .otf,
+	UprightFont = *-Regular,
+	ItalicFont = *-Italic,
+	BoldFont = *-Bold,
+	BoldItalicFont = *-BoldItalic
+]
+\setmonofont{CourierPrime}[
+	Extension = .ttf,
+	UprightFont = *-Regular,
+	ItalicFont = *-Italic,
+	BoldFont = *-Bold,
+	BoldItalicFont = *-BoldItalic
+]
+\setmathfont{STIXTwoMath-Regular.otf}
+
+% Ensure the Neo Sans Pro fontfamily is installed on the system. Else an error will occur
+\newfontface\NeoSansProReg{NeoSansPro-Regular.otf}
+\newfontface\NeoSansProMed{NeoSansPro-Medium.otf}
+\newfontface\NeoSansProBold{NeoSansPro-Bold.otf}
+\newfontface\NeoSansProBlack{NeoSansPro-Black.otf}
+\titleformat{\chapter}{\NeoSansProMed\huge}{\thechapter}{1em}{\raggedright}
+\titleformat{\section}{\NeoSansProMed\Large}{\thesection}{1em}{\raggedright}
+\titleformat{\subsection}{\NeoSansProMed\large}{\thesubsection}{1em}{\raggedright}
+\titleformat{\subsubsection}{\NeoSansProMed\normalsize}{\thesubsubsection}{1em}{\raggedright}
+\urlstyle{tt}
 
 \onehalfspacing
 \setlength{\parindent}{0pt}
