@@ -95,8 +95,33 @@
 \captionsetup{skip=4pt plus 1pt minus 1pt} % Spacing of captions
 
 % TABLE OF CONTENTS (TOC) %
+% Redefine toc to change width of content and center
+\makeatletter
+\renewcommand{\tableofcontents}{%
+	\@cfttocstart
+	\chapter*{Indhold}
+	\begingroup
+	\parindent\z@ \parskip\cftparskip
+	\noindent\makebox[\textwidth][c]{%
+		\begin{minipage}{.85\linewidth}
+			\@starttoc{toc}%
+		\end{minipage}
+	}
+	\endgroup
+	\@cfttocfinish
+}
+\makeatother
+\renewcommand{\cftdot}{} % Remove TOC dots
+% Font changes
+\renewcommand{\cftchapfont}{\NeoSansProMed}
+\renewcommand{\cftchappagefont}{\NeoSansProMed}
+\renewcommand{\cftsecfont}{\NeoSansProReg}
+\renewcommand{\cftsecpagefont}{\NeoSansProReg}
+\renewcommand{\cftsubsecfont}{\NeoSansProReg}
+\renewcommand{\cftsubsecpagefont}{\NeoSansProReg}
+% Depth
 \setcounter{tocdepth}{2}    % Depth of table of content: sub sections will not be included in table of contents
-\setcounter{secnumdepth}{2} % Depth of section numbering: sub sub sections are not numbered
+\setcounter{secnumdepth}{1} % Depth of section numbering: sub sections are not numbered
 
 % HEADER + FOOTER
 \fancypagestyle{main}{% All normal pages
