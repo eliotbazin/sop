@@ -1,0 +1,35 @@
+% Set settings for table
+\setchemfig{atom style={scale=0.7},atom sep=0.65cm,cram width=0.6ex,cram dash sep=1.4pt, cram dash width=0.7pt}
+\definesubmol{a}{O=[:-90](-[:-30]OH)}
+\begin{table}[hbt]
+	\centering
+	\caption{Tabel over de 20 standard aminosyrer, deres nominelle masse og deres struktur. Stereodeskriptoren '\iupac{\L}' er udeladt. \parencite{aminoname,ptable,aminoref}}
+	\setlength{\extrarowheight}{4pt}
+	\begin{tabular}{>{\small}wl{1.9cm} >{\small}wr{1.1cm} wc{3.4cm} | >{\small}wl{1.9cm} >{\small}wr{1.1cm} wc{3.4cm}}\toprule
+		{\normalsize Navn} & {\normalsize $m$} & Struktur                                                                                                 &
+		{\normalsize Navn} & {\normalsize $m$} & Struktur                                                                                                   \\\midrule
+		Alanin             & 89                & \chemfig{!a-[:210](-[:150]H_3C)<[:-90]NH_2}                                                              &
+		Cystein            & 121               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]HS}                                                           \\
+		Glycin             & 75                & \chemfig{!a-[:210]-[:150]NH_2}                                                                           &
+		Glutamin           & 147               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150](=[:90]O)-[:210]H_2N}                                  \\
+		Isoleucin          & 131               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150](<:[:90]CH_3)-[:210]-[:150]H_3C}                                   &
+		Serin              & 105               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]HO}                                                           \\
+		Leucin             & 131               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210](-[:-90]CH_3)-[:150]H_3C}                                   &
+		Threonin           & 119               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150](<[:90]OH)-[:210]H_3C}                                               \\
+		Methionin          & 149               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150]S-[:210]H_3C}                                        &
+		Tyrosin            & 181               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*6(=-=(-OH)-=-)}                                              \\
+		Prolin             & 115               & \chemfig{!a-[:210]*5(----NH-[,,1])}                                                                      &
+		Asparaginsyre      & 133               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210](=[:-90]O)-[:150]OH}                                          \\
+		Valin              & 117               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150](-[:90]CH_3)-[:210]H_3C}                                           &
+		Glutaminsyre       & 147               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150](=[:90]O)-[:210]OH}                                    \\
+		Phenylalanin       & 165               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*6(=-=-=-)}                                                 &
+		Arginin            & 174               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150]-[:210]\chembelow{N}{H}-[:150](=[:90]NH)-[:210]H_2N}   \\
+		Tryptophan         & 204               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*5(-*6(-=-=--)=-\chembelow{N}{H}-=)}                        &
+		Histidin           & 155               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*5(-N=-\chembelow{N}{H}-=)}                                   \\
+		Asparagin          & 133               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210](=[:-90]O)-[:150]H_2N}                                      &
+		Lysin              & 146               & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150]-[:210]-[:150]H_2N}                                    \\\bottomrule
+	\end{tabular}
+	\label{tab:stdaminacid}
+\end{table}
+% Change settings back to default
+\setchemfig{atom style={scale=1},atom sep=3em,cram width=1.5ex,cram dash sep=2pt, cram dash width=1pt}

@@ -130,6 +130,13 @@
 \setcounter{tocdepth}{2}    % Depth of table of content: sub sections will not be included in table of contents
 \setcounter{secnumdepth}{1} % Depth of section numbering: sub sections are not numbered
 
+% CAPTION %
+\DeclareCaptionLabelFormat{NeoSansProMed}{{\footnotesize\NeoSansProMed #1 #2}}
+\captionsetup{
+	font=small,
+	labelformat=NeoSansProMed,
+}
+
 % HEADER + FOOTER
 \fancypagestyle{main}{% All normal pages
 	\fancyhead{}
