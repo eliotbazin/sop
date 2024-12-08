@@ -1,0 +1,24 @@
+\section{Firepolet massespektrometer}
+Det firpolede massespektrometer bruger stabiliteten af ionernes bane i et oscillerende elektrisk felt til at separere dem afhængig af deres $m/z$ \parencite{massspec}.
+Den består af fire cirkulære, eller ideelt hyperbolske, parallelle stænger, som kan ses på \cref{fig:quadpole}.
+\input{graphics/figures/quadpole}
+Det elektriske potentiale i stængerne som ses på \cref{fig:quadpolecharge} er givet ved:
+\begin{equation}
+	\phi_0 = U - V \cos{\omega t}.
+\end{equation}
+hvor $U$ er jævnstrømsspændingen, $V$ er spændingsamplituden af radiofrekvensen og $\omega$ er vinkelfrekvensen givet ved $\omega = 2\pi v$, hvor $v$ er radiofrekvensen.
+Typisk vil $U$ ligge i intervallet \qtyrange{500}{2000}{\volt} og $V$ i intervallet \qtyrange{0}{3000}{\volt} \parencite{massspec}, men for en given $m/z$ kan de findes ved:
+\begin{equation}
+	U = a_u \frac{m}{z} \frac{\omega^2 r_0^2}{8e}\quad\text{og}\quad V = q_u \frac{m}{z} \frac{\omega^2 r_0^2}{4e}.
+\end{equation}
+hvor $u$ står for enten $x$ eller $y$, og $0 \leq a, q \leq 1$ er parametre, hvor Mathieu ligningen er stabil \parencite{mathieu,massspec}.
+I et firpolet massespektrometer vil $r_0$ være konstant, og $\omega$ vil holdes konstant, sådan at det er spændingerne der ændres på \parencite{mstextbook}.
+\subsection{Gaskromatografi}
+Ofte anvendes et firpolet massespektrometer i sammenhæng med en \emph{gaskromatograf} (GC), fordi det er en hurtigscannende analysator \parencite{basicgaschrom}.
+GC er en måde at adskille flygtige komponenter i en kompleks opløsning \parencite{mstextbook}, og er derfor fordelagtig ved brug af MS, da den ikke er god når der der flere stoffer tilstede.
+GC producere et chromatogram, hvor 1.-aksen fortæller retentionstiden, ofte målt i minutter, og 2.-aksen er signalstyrken.
+Et eksempel på et chromatogram kan ses på \cref{fig:examplechrom}. Hver top er et komponent i opløsningen.
+En GC adskiller stoffet på baggrund af komponenternes kogepunkt og polaritet \parencite{kromatografi}.
+\input{graphics/figures/examplechrom}
+\par Ved sammenkoblingen mellem chromatografi som GC og massespektrometri kan man lave ionchromatogrammer, som er et chromatogram over en enkelt $m/z$.
+Dette kan gøre det muligt at adskille stoffer med nærliggende retentionstid.

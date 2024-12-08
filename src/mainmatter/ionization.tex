@@ -1,0 +1,32 @@
+\section{Elektron ionisering}\label{sec:electronion}
+Her vil blive gennemgået \emph{elektron ionisering} (EI) som metode til at ionisere molekylet, da det er denne metode der gør sig gældende for det benyttede massespektrometer. % @TODO reference til forsøg
+Andre metoder til ionisering er \emph{kemisk ionisering} (CI), \emph{Fast Atom Bombardment} (FAB), og \emph{Electro Spray Ionisering} (ESI)\space\parencite{msionization}.
+\par Elektron ionisering ioniserer molekylerne ved at skyde dem med elektroner, og virker godt for mange molekyler på gasfase, men giver stor fragmentation \parencite{massspec}.
+Denne fragmentation er ikke nødvendigvis en dårlig ting, da det kan gøre identifikationen af molekyler med søgebiblioteker som \cite{nist23} bedre.
+Det er standart at accelerere elektronerne i MS, der gør brug af EI, til \qty{70}{\eV} for at få standartiserede fragmentationsmønstre, og da det er her mange atomer vil ionisere mest \parencite{massspec}.
+\subsection{Elektronkanonen}
+\input{graphics/figures/electron-gun}
+Ved EI beskydes de passerende molekyler af en elektronstråle fra en elektronkanon.
+En elektronkanon er i sin mest simple forstand en glødetråd (katoden) og en metalplade med i hul i (anoden)\space\parencite{orbitAstx}.
+Glødetråden vil når den opvarmes afgive frie elektroner, da disse vil få nok termisk energi til at overstige løsrivelsesarbejdet, der er forskellen mellem Fermi-energien\footnotemark{} og en elektrons energi i vakuum \parencite{electronmicroscopy}.
+\footnotetext{Fermi-energien er energien af elektroner i et metal ved det absolutte nulpunkt \parencite{fermienergi}.}
+Da der er en potentialeforskel mellem katoden og anoden, vil dette skabe et elektrisk felt, og da feltkraften er det eneste der påvirker elektronerne, vil de blive tiltrukket anoden (se \cref{fig:elec-gun}).
+Nogle af elektronerne vil ramme metalpladen, mens andre vil bevæge sig gennem hullet med en kinetisk energi givet ved:
+\begin{equation}
+	E_{\text{kin}} = e \cdot U_a .
+\end{equation}
+hvor $e$ er elementarladningen og $U_a$ er spændingsforskellen (se \cref{subsec:e-felt})\space\parencite{grundfysA}.
+I et MS med EI, hvor elektronerne accelereres op til at have en kinetisk energi på \qty{70}{\eV} vil det altså kræve en spændingsforskel på \qty{70}{\volt}.
+\subsection{Ionisering}
+Når de neutralt ladede molekyler i EI'en rammes af en elektron overføres noget af elektronens energi til den.
+Hvis elektronen rammer rigtigt kan energien overført være nok til at slå en elektron ud af dens bane, og derved ionisere molekylet til en positiv ion \parencite{mstextbook}.
+\begin{reaction}
+	M + e- -> M+ + 2 e-
+\end{reaction}
+EI vil primært producere ioner med ladningen $+1$, men nogle vil få højere iontal, og da dette giver en anden $m/z$ vil de også kunne ses som en anden top i massespektret.
+\subsection{Ioniseringsenergi}
+\emph{Ioniseringsenergien} (IE) er den minimale energi det vil kræve at ionisere et atom eller et molekyle ved at fjerne en elektron.
+Fjernelsen af en elektron fra et molekyle kan ske ved en $\sigma$-binding, en $\pi$-binding eller et elektron lonepair, i faldende grad efter ioniseringsenergi.
+Eksempelvis vil ædelgasser med fyldte elektronskaller have en høj IE, mens alkenen ethen vil have lavere IE.
+Derudover vil store molekyler have en lavere IE.
+De fleste molekyler vil have en ioniseringsenergi omkring \qtyrange{7}{15}{\eV} \parencite{mstextbook}.

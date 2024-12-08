@@ -1,0 +1,33 @@
+\begin{wrapfigure}{O}{0.4\linewidth}
+	\centering
+	\begin{circuitikz}
+		% Electrical
+		\draw (0,0.8)  -- (1.2,0.8) to[cute inductor] (1.2,-0.8) to[short,-*] (0.6,-0.8) -- (0,-0.8) to[V,invert] (0,0.8)
+		(0.6,-0.8) -- (0.6,-2) to[V=$U_a$,invert] (3.85,-2) -- (3.85,-1.4);
+		\node at (1.2,1.2) {Katode};
+
+		% Metal plate
+		\draw[fill=gray!20] (4,0.6,0) -- ++(-0.3,0,0) -- ++(0,-2,0) -- ++(0.3,0,0) -- cycle;
+		\draw[fill=gray!80] (4,0.6,0) -- ++(0,0,-2) -- ++(0,-2,0) -- ++(0,0,2) -- cycle;
+		\draw[fill=gray!50] (4,0.6,0) -- ++(-0.3,0,0) -- ++(0,0,-2) -- ++(0.3,0,0) -- cycle;
+		\node at (3.5,1.2) {Anode};
+
+		% Hole
+		\begin{scope}[rotate=-90,scale=0.4,shift={(0,10.4375)}]
+			\draw[fill=white] (0,0.5) ellipse[x radius=0.75,y radius=0.3];
+			\clip (0.75,1) -- (0.75,0) arc[start angle=0,end angle=180,x radius=0.75,y radius=0.3] -- (-0.75,1);
+			\clip (0,.5) ellipse[x radius=0.75,y radius=.3];
+			\shade[top color=black,bottom color=black,middle color=white] (-1.75,0) rectangle (2,1);
+			\draw (0.75,0) arc[start angle=0,end angle=180,x radius=.75,y radius=.3];
+			\draw (0,0.5) ellipse[x radius=0.75,y radius=0.3];
+		\end{scope}
+
+		% Electron
+		\draw[dashed] (1.5,0) -- (3.7,0);
+		\draw[-Stealth,red,line width=0.35mm] (2,0) -- (3,0);
+		\draw[ball color=blue!60] (2,0) circle (0.1) node[above] {$e^-$};
+		\draw[dashed] (4.3,0) -- (5.2,0);
+	\end{circuitikz}
+	\caption{Simpelt diagram af elektronkanon. Spændingen $U_a$ afgør den kinetiske energi elektronerne forlader kannonen ved.}
+	\label{fig:elec-gun}
+\end{wrapfigure}

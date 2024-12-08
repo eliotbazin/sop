@@ -1,0 +1,37 @@
+\section{Klassisk massespektrometer}
+Massespektrometre der gjorde brug af magnet eller elektrisk felter var de første tilgængelige instrumenter \parencite{mstextbook}.
+De fungerer ved at afbøje ionerne i et enten magnet eller elektrisk felt og ud fra radiusen ionerne bevæger sig ved bestemme deres $m/z$.
+Begge versioner er meget følsom over for ionernes hastighed, og vil derfor efter ionkilden have et hastighedsfilter \parencite{orbitAstx}.
+\subsection{Magnetfelt}
+Ladede partikler, som bevæger sig i et \emph{magnetfelt} ($B$-felt) vil blive påvirket af en kraft kaldet Lorentzkraften \parencite{orbitAstx}.
+For en ladet partikel med ladningen $q$, som bevæger sig med farten $v$ vinkelret på et konstant magnetfelt $B$ kan kraftpåvirkningen beskrives ved:
+\begin{equation}
+	F_B = qvB.
+\end{equation}
+Ionen vil følge en cirkulær bane med radius $r$, hvor kraften af magnetfeltet $F_B$ er lig centripetalkraften $F_c$ \parencite{orbitAstx}. Altså får vi:
+\begin{equation}\label{eq:magfield}
+	qvB = \frac{mv^2}{r}\quad\text{eller}\quad mv = qBr.
+\end{equation}
+Det ses altså at det magnetiske felt vil adskille partikler med samme ladning, afhængig af deres impuls.
+Altså adskiller MS med $B$-felt ikke direkte ionerne på baggrund af deres masse, men derimod på baggrund af deres impuls,
+men hvis de accelereres til en kendt hastighed, er effekten adskillelse af ionerne på baggrund af massen.
+\par Gyroradiusen er radiusen af den bane en ladet partikel vil bevæge sig i, i et $B$-felt. Ved \cref{eq:magfield} fås:
+\begin{equation}
+	r = \frac{mv}{qB}.
+\end{equation}
+\subsection{Elektrisk felt}\label{subsec:e-felt}
+Alle ladede partikler i et \emph{elektrisk felt} ($E$-felt) vil blive påvirket af kraft givet ved:
+\begin{equation}
+	F_E = qE.
+\end{equation}
+hvor $q$ er partiklens ladning og $E$ den elektriske feltstyrke \parencite{orbitAstx}.
+Ionen vil også her følge en cirkulær bane med radius $r$, hvor kraften af det elektriske felt $F_E$ er lig centripetalkraften $F_c$ \parencite{mstextbook}. Altså får vi:
+\begin{equation}\label{eq:elfield}
+	qE = \frac{mv^2}{r}\quad\text{eller}\quad mv^2 = qEr.
+\end{equation}
+Her ses det at $E$-feltet vil adskille partikler med samme ladning, afhængig af deres kinetiske energi \parencite{massspec}.
+Dette er den største fundementale forskel på klassiske massespektrometre med $B$-felt og med $E$-felt.
+\par Her kan bevægelsesradiusen for partiklen i et $E$-felt findes ud fra \cref{eq:elfield} og der fås:
+\begin{equation}
+	r = \frac{mv^2}{qE}.
+\end{equation}

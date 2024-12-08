@@ -1,0 +1,26 @@
+\chapter{Massespektrometri}
+\emph{Massespektrometri} (MS) er en kemisk analysemetode som går ud på at ionisere et molekyle og dets fragmenter, adskille dem ud fra forholdet masse og ladning ($m/z$) og kvantitativt bestemme ionintensiteten ved en given $m/z$.
+Alle disse komponenter i et massespektrometre opererer under højt vakuum for at undgå forstyrrelser af ionerne (se \cref{subsec:freelength}).
+Massespektrometri er, i modsætning til andre kemiske analysemetoder, som \emph{kernemagnetisk resonans} (NMR) eller infrarød spektroskopi (IR), destruktiv da den forbruger analytten.
+Dog kræver analysemetoden meget meget lidt (få mikrogram) af analytten for at få et godt resultat \parencite{mstextbook}.
+\par I massespektrometri bruges forholdet $m/z$ til at beskrive resultaterne.
+Den kan tænkes som atomar masse over elementarladninger for et molekyle \parencite{chemana}.
+Det er opfundet størrelse brugt i stedet for en SI-enhed som \unit[per-mode=power]{\kilogram\per\coulomb} \parencite{mstextbook}.
+\subsection{Massespektrum}
+\input{graphics/figures/examplems}
+Et massespektrometer vil producere et massespektrum som viser ionintensiteten ved en given $m/z$ værdi (se \cref{fig:examplems}).
+Hver top vil være et fragment af analytten (se \cref{sec:electronion}).
+De mindre toppe omkring de større skyldes isotopfordelingen af atomerne.
+Historisk blev aflæsningen af massespektre gjort med opslagsværker som \citetitle{massspectra} \parencite{massspectra},
+men i nutiden bruges elektroniske søgebiblioteker som \citetitle{nist23} \parencite{nist23}.
+\subsection{Den fri middelvejslængde}\label{subsec:freelength}
+Den fri middelvejlængde er et mål for, hvor langt et molekyle i en gas kan bevæge sig uden at støde ind i et andet molekyle \parencite{knudsenstrømning}.
+I et massespektrometer vil man gerne have denne så stor som muligt, da ionerne ved kollision vil ændre deres bane og eventuelt lave uønskede reaktioner der ville give støj i målingen \parencite{massspec}.
+Denne størrelse er givet ved:
+\begin{equation}
+	L = \frac{kT}{\sqrt{2}p\sigma}
+\end{equation}
+hvor $k$ er Boltzmannkonstanten, $T$ er den absolute temperatur, $p$ er trykket (i \unit{\pascal}) og $\sigma$ er kollisionstvæsnittet givet ved $\sigma = \pi d^2$,
+hvor $d$ er summen af det stillestående molekyles og ionens radius \parencite{massspec}.
+Massespektrometre arbejder derfor ved meget lavt tryk (omkring \qty{e-4}{\pascal}), da dette minimere de uønskede effekter \parencite{mstextbook}.
+

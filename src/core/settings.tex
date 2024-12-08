@@ -132,9 +132,14 @@
 
 % CAPTION %
 \DeclareCaptionLabelFormat{NeoSansProMed}{{\footnotesize\NeoSansProMed #1 #2}}
+\DeclareCaptionLabelFormat{NeoSansProMedSub}{{\footnotesize\NeoSansProMed (#2)}}
 \captionsetup{
 	font=small,
 	labelformat=NeoSansProMed,
+}
+\subcaptionsetup{
+	font=small,
+	labelformat=NeoSansProMedSub
 }
 
 % HEADER + FOOTER
@@ -153,6 +158,13 @@
 	\fancyfoot[LE,RO]{\footnotesize \thepage}
 	\fancyfoot[RE,LO]{\footnotesize \doctitle} % - \leftmark
 	\fancyhfoffset[E,O]{0pt}
+}
+
+% CHEMSETUP %
+\chemsetup[reactions]{
+	before-tag = R\thechapter.,
+	tag-open = ( ,
+	tag-close = )
 }
 
 % LISTS %
