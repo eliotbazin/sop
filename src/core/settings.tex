@@ -31,7 +31,15 @@
 }
 
 % UNITS %
-\sisetup{range-phrase ={--},range-units = single}
+\sisetup{
+	range-phrase ={--},
+	range-units = single,
+	group-digits = integer,
+	group-minimum-digits=4,
+	table-number-alignment=right,
+}
+\DeclareSIUnit{\molar}{M}
+\DeclareSIUnit{\rpm}{rpm}
 
 %%%%%%%%%%%%%%
 % APPEARANCE %
