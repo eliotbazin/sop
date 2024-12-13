@@ -46,7 +46,7 @@
 %%%%%%%%%%%%%%
 
 % DOCUMENT FORMAT %
-\geometry{a4paper,tmargin=20mm,rmargin=25mm,lmargin=25mm,margin=21mm,bmargin=20mm,footskip=5mm}
+\geometry{a4paper,tmargin=20mm,rmargin=25mm,lmargin=25mm,margin=21mm,bmargin=20mm,footskip=8mm}
 
 % COLOURS %
 \selectcolormodel{\targetcolourmodel}
@@ -155,21 +155,16 @@
 \setlength{\epigraphwidth}{.4\textwidth}
 
 % HEADER + FOOTER
+\fancyhf{}
 \fancypagestyle{main}{% All normal pages
-	\fancyhead{}
-	\fancyfoot{}
 	\renewcommand{\headrulewidth}{0pt}
 	\fancyfoot[LE,RO]{\footnotesize \thepage}
-	\fancyfoot[RE,LO]{\footnotesize \doctitle} % - \rightmark
-	\fancyhfoffset[E,O]{0pt}
+	\fancyfoot[RE,LO]{\scriptsize\NeoSansProReg\nouppercase{\leftmark}}
 }
 \fancypagestyle{plain}{% Chapter pages
-	\fancyhead{}
-	\fancyfoot{}
 	\renewcommand{\headrulewidth}{0pt}
 	\fancyfoot[LE,RO]{\footnotesize \thepage}
-	\fancyfoot[RE,LO]{\footnotesize \doctitle} % - \leftmark
-	\fancyhfoffset[E,O]{0pt}
+	\fancyfoot[RE,LO]{\scriptsize\NeoSansProReg\nouppercase{\leftmark}}
 }
 
 % CHEMSETUP %
