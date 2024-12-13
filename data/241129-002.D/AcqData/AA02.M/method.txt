@@ -1,0 +1,37 @@
+﻿Additional Information for konditionering.M
+File created Mon Jun 03 21:43:26 2024
+
+Method : C:\MassHunter\GCMS\1\METHODS\test.M
+Renamed: C:\MassHunter\GCMS\1\METHODS\konditionering.M
+Mon Jun 03 21:43:28 2024
+-----------------------------------------
+
+Method : C:\MassHunter\GCMS\1\methods\konditionering.M
+Renamed: C:\MassHunter\GCMS\1\methods\ready.M
+Tue Jun 04 00:12:19 2024
+-----------------------------------------
+
+Method : C:\MassHunter\GCMS\1\methods\ready.M
+Renamed: C:\MassHunter\GCMS\1\methods\APR_scan2.M
+Tue Jun 04 00:58:43 2024
+-----------------------------------------
+
+Method : C:\MassHunter\GCMS\1\methods\APR2024\APR_scan2.M
+Renamed: C:\MassHunter\GCMS\1\methods\APR2024\DFTPP.M
+Tue Jun 04 01:41:09 2024
+-----------------------------------------
+
+Method : C:\MassHunter\GCMS\1\methods\APR2024\DFTPP.M
+Renamed: C:\MassHunter\GCMS\1\methods\Eliot\DFTPP.M
+Mon Nov 25 12:17:36 2024
+-----------------------------------------
+
+Method : C:\MassHunter\GCMS\1\methods\Eliot\DFTPP.M
+Renamed: C:\MassHunter\GCMS\1\methods\Eliot\AA01.M
+Fri Nov 29 11:32:38 2024
+-----------------------------------------
+
+Method : C:\MassHunter\GCMS\1\methods\Eliot\AA01.M
+Renamed: C:\MassHunter\GCMS\1\methods\Eliot\AA02.M
+Fri Nov 29 13:08:49 2024
+-----------------------------------------

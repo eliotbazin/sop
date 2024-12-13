@@ -40,9 +40,10 @@
 
 \newpage
 \printbibliography[heading=bibintoc,title={Litteratur}]
-% \cleardoublepage
-% \appendix
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} % No appendix sections in toc
 % Appendices
+\newpage\input{backmatter/experiment-data.tex}
 
 \input{backmatter/backpage} % Auto clears to left
 

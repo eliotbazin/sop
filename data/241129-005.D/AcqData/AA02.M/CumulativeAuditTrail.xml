@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="yes"?>
+<AuditTrailDataSet xmlns="http://tempuri.org/AuditTrailDataSet.xsd">
+  <AuditTrailEntry>
+    <ID>0</ID>
+    <ComputerName>DESKTOP-KC9CUIM</ComputerName>
+    <User>DESKTOP-KC9CUIM\Administrator</User>
+    <TimeStamp>2024-11-29T13:08:50.3694712-02:00</TimeStamp>
+    <Reason>none defined</Reason>
+    <Comment>Created New Method: AA02.M</Comment>
+    <Approved>false</Approved>
+  </AuditTrailEntry>
+  <AuditTrailEntry>
+    <ID>1</ID>
+    <ComputerName>DESKTOP-KC9CUIM</ComputerName>
+    <User>system</User>
+    <TimeStamp>2024-11-29T13:10:01.808059-02:00</TimeStamp>
+    <Reason>none defined</Reason>
+    <Comment>Updated the GC method settings for C:\MassHunter\GCMS\1\methods\Eliot\AA02.M</Comment>
+    <Approved>false</Approved>
+  </AuditTrailEntry>
+  <LoggableModification>
+    <AuditLogEntryID>0</AuditLogEntryID>
+    <LoggableModificationID>0</LoggableModificationID>
+    <ChangeDescription>Initial Version</ChangeDescription>
+  </LoggableModification>
+  <LoggableModification>
+    <AuditLogEntryID>1</AuditLogEntryID>
+    <LoggableModificationID>1</LoggableModificationID>
+    <ChangeDescription>Oven Program changed:     80 °C for 0 min -&gt;     60 °C for 1 min.</ChangeDescription>
+  </LoggableModification>
+  <LoggableModification>
+    <AuditLogEntryID>1</AuditLogEntryID>
+    <LoggableModificationID>2</LoggableModificationID>
+    <ChangeDescription>Column #1 (Initial) changed: 80 °C -&gt; 60 °C.</ChangeDescription>
+  </LoggableModification>
+  <LoggableModification>
+    <AuditLogEntryID>1</AuditLogEntryID>
+    <LoggableModificationID>3</LoggableModificationID>
+    <ChangeDescription>Column #1 Pressure changed: 21.422 psi -&gt; 19.696 psi.</ChangeDescription>
+  </LoggableModification>
+  <LoggableModification>
+    <AuditLogEntryID>1</AuditLogEntryID>
+    <LoggableModificationID>4</LoggableModificationID>
+    <ChangeDescription>Column #1 Average Velocity changed: 36.966 cm/sec -&gt; 36.623 cm/sec.</ChangeDescription>
+  </LoggableModification>
+  <LoggableModification>
+    <AuditLogEntryID>1</AuditLogEntryID>
+    <LoggableModificationID>5</LoggableModificationID>
+    <ChangeDescription>Column #1 Holdup Time changed: 2.0289 min -&gt; 2.0479 min.</ChangeDescription>
+  </LoggableModification>
+  <LoggableModification>
+    <AuditLogEntryID>1</AuditLogEntryID>
+    <LoggableModificationID>6</LoggableModificationID>
+    <ChangeDescription>Front SS Inlet He Pressure changed: On    21.422psi -&gt; On    19.696psi.</ChangeDescription>
+  </LoggableModification>
+  <LoggableModification>
+    <AuditLogEntryID>1</AuditLogEntryID>
+    <LoggableModificationID>7</LoggableModificationID>
+    <ChangeDescription>Front SS Inlet He Total Flow changed: On    53.914mL/min -&gt; On    53.918mL/min.</ChangeDescription>
+  </LoggableModification>
+  <Globals>
+    <AuditTargetDescription>Method AA02.M</AuditTargetDescription>
+  </Globals>
+</AuditTrailDataSet>
