@@ -1,0 +1,52 @@
+\section{Resultater}
+\subsection{Identificering}
+Af de fire chromatogrammer (se \cref{appsec:chrom}) valgtes interessante toppe som vil blive sammenlignet for de fire prøver.
+De interessante toppe undersøgtes, og der blev ved undersøgelse af massespektre afgjort stoffet.
+De toppe hvor der var høj sandsynlighed for at det var en binding med en aminosyre, kan ses i \cref{tab:id-substance}.
+\input{graphics/tables/id-substance}
+\par I \cref{tab:id-substance} ses det at stoffet ved retentionstid \qty{7.077}{\minute} og \qty{7.793}{\minute} begge blev identificeret til \iupac{\L-Proline, N-ethoxycarbonyl-, ethyl ester}.
+Det er ikke muligt at et stof har to forskellige retentionstider, så en af dem er nok blev fejlidentificeret.
+Stoffet ved RT \qty{7.077}{\minute} har meget høj Match og R. Match faktor, hvorimod stoffet ved RT \qty{7.793}{\minute} har lavt match.
+Dette tyder på stof nummer to nok ikke er \iupac{\L-Proline, N-ethoxycarbonyl-, ethyl ester}, men derimod et andet stof.
+Dog har stoffet's massespektrum en stor top ved $m/z$ \num{70}, som er meget karakteristisk for prolin, og stoffet er derfor nok en anden prolinforbindelse.
+\subsection{Kvantificering}
+\par For hver stof i \cref{tab:id-substance} valgtes der én target ion og \numrange{1}{2} qualifier ions (se \cref{tab:area}), som vil bruges til at bestemme den relative mængde af stofferne i prøven.
+Der blev kigget på ionchromatogrammer for at vælge eksklusive ioner, der vil minimere støj i målingerne.
+Toppene i ionchromatogrammerne blev integreret for at bestemme den målte mængde af stofferne.
+Derefter blev der delt med den numeriske værdi af massen af den afmålte mængde honning, fra \cref{tab:samples}, for at mindske afvigelser.
+De korrigerede integrerede arealer for stofferne kan ses i \cref{tab:area}.
+\input{graphics/tables/area}
+\par For at finde prøvernes aminosyreindhold i forhold til prøve \num{1}, blev arealerne under stoffer med samme aminosyre summeret
+og derefter blev indholdet af de enkelte aminosyrer delt med indholdet i prøve \num{1}, som var kontrolprøven af \qty{100}{\percent} dansk honning (se \cref{tab:samples}).
+Det gøres da vi antager at kontrolhonningen er vores standard, og det er afvigelser fra denne vi er interesserede i.
+Resultatet af dette kan ses i \cref{fig:relativeAA}.
+\input{graphics/figures/relative-content}
+\par Som det kan ses på \cref{fig:relativeAA} har prøve \num{4} højere indhold af de fleste aminosyrer det var muligt at detektere, på nær glycin og lysin, sammenlignet med prøve 1.
+Derudover kan det også ses på figuren at prøve 2 og 3 er omkring \qty{25}{\percent} af kontrolprøven, hvilket passer nogenlunde overens med blandingsforholdende i \cref{tab:samples}.
+\input{graphics/figures/aa-dist}
+\par For at finde aminosyrefordelingen i de fire prøve blev aminosyreindholdet i hver af de fire prøver summeneret, og hver aminosyres andel udregnet.
+Resultatetet af dette kan ses i \cref{fig:aa-comp}. Det ses her at prolin er den klart dominerende aminosyre i honning, hvilket stemmer overens med blandt andet \textcite{AAhoney,AAhoneyPl}.
+Derudover ses det også, at det relative prolinindhold i prøve 4, honningen fra ikke-EU lande, er lavere end i de andre prøver, men at det istedet indeholder højere relativt indhold phenylalanin.
+Dette ses også på \cref{fig:relativeAA}, hvor prøve 4 indeholder over \num{15} gange så meget phenylalanin i forhold til prøve 1.
+I \cref{fig:relativeAA} fremgår det også, at prøve 4 indeholder over \num{5} gange så meget tyrosin som prøve 1, men på \cref{fig:aa-comp} ses det at tysosinindholdet generelt er meget lavt i prøverne.
+\par På \cref{fig:aa-comp} ses det at prøve \numrange{1}{3} har omtrent samme aminosyrefordeling, hvilket også var det der forventes, da prøve 2 og 3 er opblandinger af prøve 1.
+Dog afviger opblandingernes forhold af glycinindhold.
+\subsection{Forsøgsopsamling}
+Generelt er det ud fra \cref{fig:relativeAA,fig:aa-comp} muligt at bestemme at prøve 2 og 3 er opblandinger af prøve 1.
+Det kan umiddelbart være svært at sammenligne prøve 1 og 4 (dansk og ikke-EU honning), da aminosyreindholdet er forskelligt.
+Dog kan nogle aminosyre som glycin, glutamin, prolin og lysin bruges som indikatorer.
+De er alle forholdvist tæt i absolut indhold, og det relative indhold af særligt glutamin ligger nært.
+\par Særligt prolin kan fungere godt som indikator da dette er den klart mest indeholdte aminosyre i honning.
+Den har dog det problem at dens koncentration falder under oplagring, og er derfor brugt som indikator for honningens friskhed \parencite{VonDerOhe}.
+\par I forsøget blev bestemt et prolinindhold på \qtyrange{76}{90}{\percent} af de totale aminosyre, hvor studierne \textcite{geohoney,aaPureHoney} har bestemt et prolinindhold på \qtyrange{50}{85}{\percent} af de totale aminosyre.
+I de andre studier lykkedes det dog at finde \num{26} aminosyrer, hvorimod dette forsøg kun fandt \num{10}. Det højere antal af fundne aminosyrer gør også det totale aminosyreindhold højere, hvilket vil gøre prolins andel mindre.
+Altså passer det eksperimentelt bestemte prolinindhold fint med andet litteratur.
+\par Prøve 3 har vist et generelt højere indhold af aminosyrer end prøve 2, selvom det kunne forventes der var aminosyrer i agavesiruppen \parencite{agaveAA} og ikke i glucosesirup, da disse ikke burde fremkomme i produktionen \parencite{glucoseManufacture}.
+Dette kunne skyldes upræcis opmåling ved opblanding af prøverne ud fra \cref{tab:samples}.
+Studiet \textcite{prolineHoney}, har vist hvordan prolinindholdet falder ved tilsætning af sukkersirupper til honning.
+Studiet fandt at prolinindholdet falder i højere grad ved tilsætning af fructose end ved tilsætning af glucose, og da agavesirup består af over \qty{50}{\percent} fructose \parencite{agaveSyrup} kunne dette også have været være en medvirkende faktor.
+\par I prøve 4 var indholdet af phenylalanin \num{15} gange højere end i den danske honning (se \cref{fig:relativeAA}).
+Dette kan være betydeligt for personer der lider af \emph{fenylketonuri} (PKU), som er en genetisk lidelse, der forårsager problemer med nedbrydelsen af phenylalanin.
+Disse mennesker kan ikke nedbryde phenylalanin og den vil derfor ophobe sig i kroppen, hvilket kan være skadeligt for hjernen og nervesystemet. \parencite{PKU}
+\par Disse konklusioner kræver, at stofferne blev korrekt identificeret, men i \cref{tab:id-substance} ses det at ikke alle stofferne havde fantastisk match og reverse match med databasen \textcite{nist23}.
+Altså kunne der godt være forekommet misidentifikation af nogle af stofferne.

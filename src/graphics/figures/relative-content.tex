@@ -1,0 +1,118 @@
+% read in data
+\pgfplotstableread{
+	AA p2 p3 p4
+	\iupac{\chembeta}-Ala 0.281 0.296 1.798
+	Gly 0.160 0.163 0.872
+	Val 0.278 0.301 1.790
+	Leu 0.293 0.299 1.681
+	Ile 0.304 0.285 1.740
+	Pro 0.296 0.290 1.186
+	Phe 0.281 0.285 15.478
+	Gln 0.236 0.254 1.169
+	Lys 0.255 0.268 0.784
+	Tyr 0.228 0.238 5.315
+
+}\datatable
+
+% get number of rows
+\pgfplotstablegetrowsof{\datatable}
+% subtract 1 because table indices start at 0
+\pgfmathsetmacro{\Nrows}{\pgfplotsretval-1}
+% for convenience, macro to store width of axis
+\pgfmathsetlengthmacro{\MyAxisW}{10cm}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{adjustbox}{width=0.9\linewidth}
+		\begin{tikzpicture}[
+				cell/.style={ % style used for "table" cells
+						draw,
+						minimum width={\MyAxisW/(\Nrows+1)}, % +1 because -1 above
+						minimum height=3ex,
+						inner sep=0pt,
+						outer sep=0pt,
+						anchor=north west,
+						font=\scriptsize
+					}]
+			\begin{axis}[
+					name=ax,
+					% so axis labels and ticklabels are not accounted for in size settings   
+					scale only axis,
+					width=\MyAxisW,
+					height=4cm,
+					% use a stacked bar char
+					ybar,
+					grid=both,
+					grid style={line width=.2pt, draw=black!25},
+					major grid style={line width=.3pt,draw=black!90},
+					% set distance between yticks
+					ytick={0,1,2},
+					minor tick num=3,
+					% only need left y-axis line
+					axis y line=left,
+					xtick=\empty, % we add the ticklabels as part of the table, so no xticks needed
+					x axis line style={draw=none},
+					% divide axis width by twice the number of rows, so that the whitespace between bars is the same as the bar width
+					bar width={\MyAxisW/(6*\Nrows)},
+					% and for that we need to make sure that the distance from the first/last tick to the axis edge is the same, so that there is a half a bar width of space
+					enlarge x limits={abs={\MyAxisW/(2*\Nrows+2)}},
+					ymin=0, ymax=2.1,
+					ylabel={\footnotesize Indhold ift. prøve 1},
+					xlabel={},
+					tick label style={font=\footnotesize},
+				]
+				% because the x-values are not evenly spaced, used index as x-value instead
+				\addplot +[black!69] table[x expr=\coordindex,y=p2] {\datatable};
+				\label{datap2}
+
+				\addplot +[black!29] table[x expr=\coordindex,y=p3] {\datatable};
+				\label{datap3}
+
+				\addplot +[black!52] table[x expr=\coordindex,y=p4] {\datatable};
+				\label{datap4}
+			\end{axis}
+
+			%% Hardcoded %%
+			% Show discontinuity in bars
+			\coordinate (phe) at (6.75,4);
+			\coordinate (tyr) at (9.75,4);
+			\path[fill=black!52] ($(phe)+(-0.1,0.06)$) rectangle ($(phe)+(0.1,0.26)$) node[anchor=east,xshift=-3pt] {\scriptsize\num{15.478}};
+			\draw ($(phe)+(-0.2,0)$) -- ($(phe)+(0.2,0)$);
+			\draw ($(phe)+(-0.2,0.06)$) -- ($(phe)+(0.2,0.06)$);
+			\path[fill=black!52] ($(tyr)+(-0.1,0.06)$) rectangle ($(tyr)+(0.1,0.26)$) node[anchor=east,xshift=-3pt] {\scriptsize\num{5.315}};
+			\draw ($(tyr)+(-0.2,0)$) -- ($(tyr)+(0.2,0)$);
+			\draw ($(tyr)+(-0.2,0.06)$) -- ($(tyr)+(0.2,0.06)$);
+			%% %% %% %% %%
+
+			% define a starter coordinate at the lower left corner of the axis
+			\coordinate (c-0-0) at (ax.south west);
+
+			% loop over the table
+			\foreach [count=\j from 1] \i in {0,...,\Nrows}
+				{
+					% get element \i from the x-column, stored in \pgfplotsretval and add node with value
+					\pgfplotstablegetelem{\i}{AA}\of\datatable
+					\node [cell] (c-0-\j) at (c-0-\i.north east) {\pgfplotsretval};
+
+					\pgfplotstablegetelem{\i}{p2}\of\datatable
+					\node [cell] (c-1-\j) at (c-0-\j.south west) {\num{\pgfplotsretval}};
+
+					\pgfplotstablegetelem{\i}{p3}\of\datatable
+					\node [cell] (c-2-\j) at (c-1-\j.south west) {\num{\pgfplotsretval}};
+
+					\pgfplotstablegetelem{\i}{p4}\of\datatable
+					\node [cell] (c-3-\j) at (c-2-\j.south west) {\num{\pgfplotsretval}};
+				}
+
+			% add "legend" on the left
+			\matrix [draw,nodes={cell,draw=none},anchor=north east,row sep=0pt,outer sep=0pt,inner ysep=0pt,inner xsep=-3pt] at (c-1-1.north west)
+			{
+				\node {\ref{datap2}}; & \node{P2}; \\
+				\node {\ref{datap3}}; & \node{P3}; \\
+				\node {\ref{datap4}}; & \node{P4}; \\
+			};
+		\end{tikzpicture}
+	\end{adjustbox}
+	\caption{Søjlediagram over relativt aminosyreindhold af prøve \numrange{2}{4} i forhold til prøve \num{1}, med tilhørende tabel hvori den eksakte værdi kan aflæses. Der bør noteres at to søjler overstier grafens akser. Lavet på baggrund af data i \cref{tab:area}.}
+	\label{fig:relativeAA}
+\end{figure}

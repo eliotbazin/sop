@@ -1,0 +1,35 @@
+% Set settings for table
+\setchemfig{atom style={scale=0.7},atom sep=0.65cm,cram width=0.6ex,cram dash sep=1.4pt, cram dash width=0.7pt}
+\definesubmol{a}{O=[:-90](-[:-30]OH)}
+\begin{table}[hbt]
+	\centering
+	\caption{Tabel over de 20 standard aminosyrer, deres forkortede navn og deres struktur på deres uioniserede form. Stereodeskriptoren '\iupac{\L}' er udeladt i navnene. \parencite{aminoname,nist23}}
+	\setlength{\extrarowheight}{4pt}
+	\begin{tabular}{>{\small}wl{2.15cm} >{\small}wr{0.65cm} wc{3.6cm} | >{\small}wl{2.15cm} >{\small}wr{0.65cm} wc{3.6cm}}\toprule
+		{\normalsize Navn} & {\normalsize Kort} & Struktur                                                                                                 &
+		{\normalsize Navn} & {\normalsize Kort} & Struktur                                                                                                   \\\midrule
+		Alanin             & Ala                & \chemfig{!a-[:210](-[:150]H_3C)<[:-90]NH_2}                                                              &
+		Cystein            & Cys                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]HS}                                                           \\
+		Asparaginsyre      & Asp                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210](=[:-90]O)-[:150]OH}                                        &
+		Glutaminsyre       & Glu                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150](=[:90]O)-[:210]OH}                                    \\
+		Phenylalanin       & Phe                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*6(=-=-=-)}                                                 &
+		Glycin             & Gly                & \chemfig{!a-[:210]-[:150]NH_2}                                                                             \\
+		Histidin           & His                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*5(-N=-\chembelow{N}{H}-=)}                                 &
+		Isoleucin          & Ile                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150](<:[:90]CH_3)-[:210]-[:150]H_3C}                                     \\
+		Lysin              & Lys                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150]-[:210]-[:150]H_2N}                                  &
+		Leucin             & Leu                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210](-[:-90]CH_3)-[:150]H_3C}                                     \\
+		Methionin          & Met                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150]S-[:210]H_3C}                                        &
+		Asparagin          & Asn                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210](=[:-90]O)-[:150]H_2N}                                        \\
+		Prolin             & Pro                & \chemfig{!a-[:210]*5(----NH-[,,1])}                                                                      &
+		Glutamin           & Gln                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150](=[:90]O)-[:210]H_2N}                                  \\
+		Arginin            & Arg                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]-[:150]-[:210]\chembelow{N}{H}-[:150](=[:90]NH)-[:210]H_2N} &
+		Serin              & Ser                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]HO}                                                           \\
+		Threonin           & Thr                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150](<[:90]OH)-[:210]H_3C}                                             &
+		Valin              & Val                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150](-[:90]CH_3)-[:210]H_3C}                                             \\
+		Tryptophan         & Trp                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*5(-*6(-=-=--)=-\chembelow{N}{H}-=)}                        &
+		Tyrosin            & Tyr                & \chemfig{!a-[:210](<[:-90]NH_2)-[:150]-[:210]*6(=-=(-OH)-=-)}\vspace{2ex}                                  \\\addlinespace[1.5ex]\bottomrule
+	\end{tabular}
+	\label{tab:stdaminacid}
+\end{table}
+% Change settings back to default
+\setchemfig{atom style={scale=1},atom sep=3em,cram width=1.5ex,cram dash sep=2pt, cram dash width=1pt}

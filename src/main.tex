@@ -7,26 +7,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagenumbering{gobble}
+\includepdf{frontmatter/opgaveformulering.pdf}\cleardoublepage
 \input{frontmatter/frontpage}
 \input{frontmatter/title}
 \newpage
-\newgeometry{top=2.1cm, bottom=2cm, outer=2cm, inner=3cm}
+\newgeometry{top=2cm, bottom=2.2cm, outer=2cm, inner=3cm}
 \pagenumbering{roman}
 \pagestyle{main}
 \input{frontmatter/abstract}
 \newpage
-{\NeoSansProReg\tableofcontents}
+\tableofcontents
 \cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagenumbering{arabic}
 \input{mainmatter/indledning}
+\newpage\input{mainmatter/honey}
+\input{mainmatter/sugar}
+\input{mainmatter/adulteration}
+\input{mainmatter/aminoacids}
+\newpage\input{mainmatter/massspec}
+\input{mainmatter/ionization}
+\input{mainmatter/classic-ms}
+\input{mainmatter/quadpole-ms}
+\newpage\input{mainmatter/experiment}
+\input{mainmatter/results}
+\input{mainmatter/diskussion}
+\newpage\input{mainmatter/konklusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage
-\printbibliography[heading=bibintoc]
+\newpage
+\printbibliography[heading=bibintoc,title={Litteratur}]
 % \cleardoublepage
 % \appendix
 % Appendices
