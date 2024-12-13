@@ -16,27 +16,30 @@
 \pagestyle{main}
 \input{frontmatter/abstract}
 \newpage
-{\NeoSansProReg\tableofcontents}
+\tableofcontents
 \cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagenumbering{arabic}
 \input{mainmatter/indledning}
-\cleardoublepage\input{mainmatter/honey}
+\newpage\input{mainmatter/honey}
 \input{mainmatter/sugar}
 \input{mainmatter/adulteration}
 \input{mainmatter/aminoacids}
+\newpage\input{mainmatter/massspec}
 \input{mainmatter/ionization}
 \input{mainmatter/classic-ms}
 \input{mainmatter/quadpole-ms}
-\cleardoublepage\input{mainmatter/experiment}
+\newpage\input{mainmatter/experiment}
 \input{mainmatter/results}
+\input{mainmatter/diskussion}
+\newpage\input{mainmatter/konklusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage
-\printbibliography[heading=bibintoc]
+\newpage
+\printbibliography[heading=bibintoc,title={Litteratur}]
 % \cleardoublepage
 % \appendix
 % Appendices

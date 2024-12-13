@@ -1,6 +1,6 @@
 \section{Klassisk massespektrometer}
-Massespektrometre der gjorde brug af magnet eller elektrisk felter var de første tilgængelige instrumenter \parencite{mstextbook}.
-De fungerer ved at afbøje ionerne i et enten magnet eller elektrisk felt og ud fra radiusen ionerne bevæger sig ved bestemme deres $m/z$.
+Massespektrometre, der gjorde brug af magnetiske eller elektriske felter var de første tilgængelige instrumenter \parencite{mstextbook}.
+De fungerer ved at afbøje ionerne i et enten magnet eller elektrisk felt, og ud fra den radius ionerne bevæger sig, ved bestemme deres $m/z$.
 Begge versioner er meget følsom over for ionernes hastighed, og vil derfor efter ionkilden have et hastighedsfilter \parencite{orbitAstx}.
 \subsection{Magnetfelt}
 Ladede partikler, som bevæger sig i et \emph{magnetfelt} ($B$-felt) vil blive påvirket af en kraft kaldet Lorentzkraften \parencite{orbitAstx}.
@@ -12,13 +12,13 @@ Ionen vil følge en cirkulær bane med radius $r$, hvor kraften af magnetfeltet 
 \begin{equation}\label{eq:magfield}
 	qvB = \frac{mv^2}{r}\quad\text{eller}\quad mv = qBr.
 \end{equation}
-Det ses altså at det magnetiske felt vil adskille partikler med samme ladning, afhængig af deres impuls.
-Altså adskiller MS med $B$-felt ikke direkte ionerne på baggrund af deres masse, men derimod på baggrund af deres impuls,
-men hvis de accelereres til en kendt hastighed, er effekten adskillelse af ionerne på baggrund af massen.
-\par Gyroradiusen er radiusen af den bane en ladet partikel vil bevæge sig i, i et $B$-felt. Ved \cref{eq:magfield} fås:
+Det ses at det magnetiske felt vil adskille partikler med samme ladning, afhængig af deres impuls og ikke direkte på baggrund af deres masse.
+Hvis ionerne accelereres til en kendt hastighed, er effekten adskillelse af ionerne på baggrund af massen.
+\par Gyroradiussen er radiussen af den bane en ladet partikel vil bevæge sig i, i et $B$-felt. Ved omskrivelse af \cref{eq:magfield} fås:
 \begin{equation}
 	r = \frac{mv}{qB}.
 \end{equation}
+Det er på baggrund af denne, at ionernes $m/z$ findes.
 \subsection{Elektrisk felt}\label{subsec:e-felt}
 Alle ladede partikler i et \emph{elektrisk felt} ($E$-felt) vil blive påvirket af kraft givet ved:
 \begin{equation}
@@ -30,8 +30,9 @@ Ionen vil også her følge en cirkulær bane med radius $r$, hvor kraften af det
 	qE = \frac{mv^2}{r}\quad\text{eller}\quad mv^2 = qEr.
 \end{equation}
 Her ses det at $E$-feltet vil adskille partikler med samme ladning, afhængig af deres kinetiske energi \parencite{massspec}.
-Dette er den største fundementale forskel på klassiske massespektrometre med $B$-felt og med $E$-felt.
-\par Her kan bevægelsesradiusen for partiklen i et $E$-felt findes ud fra \cref{eq:elfield} og der fås:
+Den største fundementale forskel på klassiske massespektrometre med $B$-felt og med $E$-felt er altså en adskillelse af partiklerne på baggrund af hhv. deres impuls og kinetiske energi.
+\par Her kan bevægelsesradiussen for partiklen i et $E$-felt findes ved omskrivelse af \cref{eq:elfield} og der fås:
 \begin{equation}
 	r = \frac{mv^2}{qE}.
 \end{equation}
+Det er igen denne der bruges til at finde ionernes $m/z$.
